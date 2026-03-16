@@ -1,4 +1,4 @@
 {{- define "docker-uri" -}}
-{{- $repo := .files.Get (printf "images/%s/%s.yaml" .environment .app) | fromYaml -}}
+{{- $repo := .files.Get (printf "images/integration/%s.yaml" .app) | fromYaml -}}
 {{ $repo.repository}}:{{ $repo.tag }}
 {{- end -}}
