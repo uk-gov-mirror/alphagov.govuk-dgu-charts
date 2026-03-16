@@ -18,7 +18,7 @@ data:
     // URLs are explicit and transparent for full control
     const DATAGOVUK_URL = __ENV.DATAGOVUK_URL;
     const CKAN_URL = __ENV.CKAN_URL;
-    const SEARCH_QUERY = __ENV.SEARCH_QUERY || 'climate';
+    const DATAGOVUK_QUERY = __ENV.DATAGOVUK_QUERY || 'climate';
     const CKAN_QUERY = __ENV.CKAN_QUERY || 'climate';
     const CKAN_ROWS = parseInt(__ENV.CKAN_ROWS) || 5;
 
@@ -66,7 +66,7 @@ data:
       sleep(1);
 
       // --- Test 2: Data.gov.uk Search ---
-      res = http.get(`${DATAGOVUK_URL}/search?q=${SEARCH_QUERY}`, {
+      res = http.get(`${DATAGOVUK_URL}/search?q=${DATAGOVUK_QUERY}`, {
         tags: { type: 'search' },
       });
       check(res, {

@@ -65,8 +65,8 @@ spec:
               value: {{ .Values.soak_duration | quote }}
 
             # Search and CKAN query parameters — configurable at runtime
-            - name: SEARCH_QUERY
-              value: {{ .Values.search_query | quote }}
+            - name: DATAGOVUK_QUERY
+              value: {{ .Values.datagovuk_query | quote }}
             - name: CKAN_QUERY
               value: {{ .Values.ckan_query | quote }}
             - name: CKAN_ROWS
