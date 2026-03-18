@@ -156,5 +156,5 @@ loadTestConfig:
     remoteWriteUrl: "http://kube-prometheus-stack-prometheus.monitoring.svc:9090/api/v1/write"
     trendStats: "avg,p(95),p(99)"
   storage:
-    enabled: false
+    enabled: true
   ttlSecondsAfterFinished: 3600
