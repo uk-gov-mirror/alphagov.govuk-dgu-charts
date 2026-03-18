@@ -105,4 +105,21 @@ entries:
     urls:
     - https://github.com/alphagov/govuk-dgu-charts/releases/download/govuk-dgu-shared-1.1.0/govuk-dgu-shared-1.1.0.tgz
     version: 1.1.0
-generated: "2025-04-11T11:59:13.827429872Z"
+  ndl-load-test:
+  - apiVersion: v2
+    created: "2026-03-18T10:32:10.053179095Z"
+    description: k6 load testing chart for data.gov.uk staging
+    digest: 75b46c1d032b69261b64dd3d176a2222937eb48e513e332159c5e724fe77b795
+    home: https://github.com/alphagov/govuk-dgu-charts
+    icon: https://grafana.com/img/logos/grafana.png
+    maintainers:
+    - email: datagovuk-tech@dsit.gov.uk
+      name: GDS Operators
+    name: ndl-load-test
+    sources:
+    - https://github.com/alphagov/govuk-dgu-charts
+    type: application
+    urls:
+    - https://github.com/alphagov/govuk-dgu-charts/releases/download/ndl-load-test-0.1.2/ndl-load-test-0.1.2.tgz
+    version: 0.1.2
+generated: "2026-03-18T10:32:10.053200265Z"
