@@ -155,4 +155,6 @@ loadTestConfig:
     # Enables live k6 metrics in Grafana during the test
     remoteWriteUrl: "http://kube-prometheus-stack-prometheus.monitoring.svc:9090/api/v1/write"
     trendStats: "avg,p(95),p(99)"
+  storage:
+    enabled: false
   ttlSecondsAfterFinished: 3600
