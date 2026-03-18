@@ -34,6 +34,9 @@ find:
       - /support
       - /support/new
       - /ckan_maintenance
+      - /api
+      - /harvest
+      - /user/login
   config:
     ckanDomain: "ckan.publishing.service.gov.uk"
     solrUrl: "http://ckan-dev-solr/solr/ckan"
