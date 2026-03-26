@@ -46,10 +46,6 @@
       name: {{ .basicAuthPasswordSecretKeyRef.name }}
       key: {{ .basicAuthPasswordSecretKeyRef.key }}
 {{- end }}
-- name: RATE_LIMIT_COUNT
-  value: "{{ .rateLimitCount }}"
-- name: RATE_LIMIT_PERIOD
-  value: "{{ .rateLimitPeriod }}"
 {{- with .gaTrackingId }}
 - name: GA_TRACKING_ID
   value: {{ . }}
