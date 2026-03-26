@@ -45,6 +45,11 @@
     secretKeyRef:
       name: {{ .basicAuthPasswordSecretKeyRef.name }}
       key: {{ .basicAuthPasswordSecretKeyRef.key }}
+- name: BASIC_AUTH_BYPASS
+  valueFrom:
+    secretKeyRef:
+      name: {{ .basicAuthBypassSecretKeyRef.name }}
+      key: {{ .basicAuthBypassSecretKeyRef.key }}
 {{- end }}
 {{- with .gaTrackingId }}
 - name: GA_TRACKING_ID
