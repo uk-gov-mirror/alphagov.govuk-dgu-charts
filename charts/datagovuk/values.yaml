@@ -54,6 +54,9 @@ find:
     basicAuthPasswordSecretKeyRef:
       name: datagovuk
       key: basic_auth_password
+    basicAuthBypassSecretKeyRef:
+      name: datagovuk
+      key: basic_auth_bypass
     rateLimitCount: "100"
     rateLimitPeriod: "60"
 
