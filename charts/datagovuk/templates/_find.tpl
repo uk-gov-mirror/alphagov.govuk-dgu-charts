@@ -34,6 +34,23 @@
 - name: RATE_LIMIT_PERIOD
   value: "{{ .Values.find.config.rateLimitPeriod }}"
 {{- with .Values.find.config }}
+{{ if and (ne $environment "development") (ne $environment "production") }}
+- name: BASIC_AUTH_USERNAME
+  valueFrom:
+    secretKeyRef:
+      name: {{ .basicAuthNameSecretKeyRef.name }}
+      key: {{ .basicAuthNameSecretKeyRef.key }}
+- name: BASIC_AUTH_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: {{ .basicAuthPasswordSecretKeyRef.name }}
+      key: {{ .basicAuthPasswordSecretKeyRef.key }}
+- name: BASIC_AUTH_BYPASS
+  valueFrom:
+    secretKeyRef:
+      name: {{ .basicAuthBypassSecretKeyRef.name }}
+      key: {{ .basicAuthBypassSecretKeyRef.key }}
+{{- end }}
 {{- with .gaTrackingId }}
 - name: GA_TRACKING_ID
   value: {{ . }}
