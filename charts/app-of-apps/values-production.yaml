@@ -116,7 +116,7 @@ datagovukHelmValues:
     args: ["bin/rails s -b 0.0.0.0 --pid /tmp/rails-server.pid"]
     config:
       gaTrackingId: UA-10855508-1
-      googleTagManagerId: GTM-M875Q8TH
+      googleTagManagerId: GTM-5WRWCH8X
       rateLimitCount: "100"
       rateLimitPeriod: "60"
       solrUrl: "http://ckan-solr/solr/ckan"
