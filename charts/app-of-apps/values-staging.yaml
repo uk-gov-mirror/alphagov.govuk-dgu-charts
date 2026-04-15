@@ -96,6 +96,8 @@ ckanHelmValues:
         memory: 1Gi
   externalSecret:
     enabled: true
+  externalReadonlySecret:
+    enabled: true
 datagovukHelmValues:
   arch: arm64
   environment: staging

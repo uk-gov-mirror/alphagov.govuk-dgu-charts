@@ -177,6 +177,15 @@ externalSecret:
     name: aws-secretsmanager
     kind: ClusterSecretStore
 
+# The naming of this secret and key follow the wider GOV.UK standardised naming
+externalReadonlySecret:
+  enabled: false
+  name: ckan-postgres-readonly
+  key: govuk/ckan/postgres-readonly
+  secretStoreRef:
+    name: aws-secretsmanager
+    kind: ClusterSecretStore
+
 monitoring:
   enabled: false
   metricsPort: 9394

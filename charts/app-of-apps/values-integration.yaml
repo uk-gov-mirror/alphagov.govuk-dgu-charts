@@ -94,6 +94,8 @@ ckanHelmValues:
     replicaCount: 1
   externalSecret:
     enabled: true
+  externalReadonlySecret:
+    enabled: true
 datagovukHelmValues:
   environment: integration
   arch: arm64
