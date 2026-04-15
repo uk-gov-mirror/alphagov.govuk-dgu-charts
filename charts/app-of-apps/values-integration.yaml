@@ -109,8 +109,6 @@ datagovukHelmValues:
     args: ["bin/rails s -b 0.0.0.0 --pid /tmp/rails-server.pid"]
     config:
       googleTagManagerId: GTM-5WRWCH8X
-      googleTagManagerAuth: 5FunvYw9Lsi6YtwO0jllcQ
-      googleTagManagerPreview: env-38
       ckanDomain: "ckan.integration.publishing.service.gov.uk"
       solrUrl: "http://ckan-solr/solr/ckan"
       rateLimitCount: "60"
