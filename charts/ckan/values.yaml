@@ -159,7 +159,9 @@ redis:
 dev:
   enabled: true
 gather:
-  replicaCount: 2
+  replicaCount: 1
+  probes:
+    enabled: false
   appResources:
     limits:
       memory: 2Gi

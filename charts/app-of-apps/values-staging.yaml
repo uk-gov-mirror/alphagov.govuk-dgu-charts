@@ -82,6 +82,8 @@ ckanHelmValues:
     enabled: false
   gather:
     replicaCount: 2
+    probes:
+      enabled: true
     appResources:
       limits:
         memory: 4Gi
