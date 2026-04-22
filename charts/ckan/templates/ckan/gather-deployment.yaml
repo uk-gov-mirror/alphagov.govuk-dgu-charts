@@ -39,7 +39,7 @@ spec:
               command:
                 - /bin/sh
                 - -c
-                - ckan harvester status 2>/dev/null | grep -q "alive" || exit 1
+                - pgrep -f "gather-consumer" > /dev/null
             initialDelaySeconds: 30
             periodSeconds: 10
             failureThreshold: 5
@@ -49,7 +49,7 @@ spec:
               command:
                 - /bin/sh
                 - -c
-                - ckan harvester status 2>/dev/null | grep -q "alive" || exit 1
+                - pgrep -f "gather-consumer" > /dev/null
             initialDelaySeconds: 60
             periodSeconds: 30
             failureThreshold: 3
@@ -59,7 +59,7 @@ spec:
               command:
                 - /bin/sh
                 - -c
-                - ckan harvester status 2>/dev/null | grep -q "alive" || exit 1
+                - pgrep -f "gather-consumer" > /dev/null
             initialDelaySeconds: 30
             periodSeconds: 10
             failureThreshold: 2
