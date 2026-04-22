@@ -15,10 +15,6 @@ charts/*.tgz
 # macOS
 .DS_Store
 
-LOAD-TEST.md
-LOAD-TESTING-REPORT.md
-ndl-load-test.md
-
 # Editor
 .vscode/
 .idea/

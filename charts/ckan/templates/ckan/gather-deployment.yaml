@@ -33,6 +33,38 @@ spec:
           resources:
             {{- . | toYaml | trim | nindent 12 }}
           {{- end }}
+          {{- if .Values.gather.probes.enabled }}
+          startupProbe:
+            exec:
+              command:
+                - /bin/sh
+                - -c
+                - pgrep -f "gather-consumer" > /dev/null
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            failureThreshold: 5
+            timeoutSeconds: 5
+          livenessProbe:
+            exec:
+              command:
+                - /bin/sh
+                - -c
+                - pgrep -f "gather-consumer" > /dev/null
+            initialDelaySeconds: 60
+            periodSeconds: 30
+            failureThreshold: 3
+            timeoutSeconds: 5
+          readinessProbe:
+            exec:
+              command:
+                - /bin/sh
+                - -c
+                - pgrep -f "gather-consumer" > /dev/null
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            failureThreshold: 2
+            timeoutSeconds: 5
+          {{- end }}
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:

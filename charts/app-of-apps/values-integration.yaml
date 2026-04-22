@@ -79,12 +79,16 @@ ckanHelmValues:
   dev:
     enabled: false
   gather:
+    replicaCount: 2
+    probes:
+      enabled: true
     appResources:
       limits:
-        memory: 3Gi
+        memory: 4Gi
+        cpu: 2
       requests:
         memory: 2Gi
-    replicaCount: 1
+        cpu: 500m
   fetch:
     appResources:
       limits:
