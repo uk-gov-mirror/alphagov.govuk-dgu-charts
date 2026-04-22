@@ -18,6 +18,7 @@ charts/*.tgz
 LOAD-TEST.md
 LOAD-TESTING-REPORT.md
 ndl-load-test.md
+DGUK-434-HARVEST-GATHER-INVESTIGATION.md
 
 # Editor
 .vscode/
